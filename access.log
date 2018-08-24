@@ -1,0 +1,4 @@
+[0mGET /login?a=5 [32m200 [0m6.682 ms {"a":"5"}
+[0mGET /login?a=5 [32m200 [0m6.956 ms {"a":"5"}
+[request  info]  =====> GET /login?a=5 请求参数 ===> {"a":"5"}
+[response info]  =====> /login?a=5 200 响应数据 ===> {"message":"login"}
