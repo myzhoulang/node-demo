@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+
 const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -204,4 +205,3 @@ app.get('/logout', (req, res) => {
 app.listen(app.get('port'), () => {
   console.log(`Servers start in http://localhost:${app.get('port')}`);
 });
-

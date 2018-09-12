@@ -1,5 +1,6 @@
 const nodemail = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
+const app = require('express')();
 const html = `
 <style>
 		table { width: 100%;  border-spacing: 0; border-bottom: 1px solid #000; border-left: 1px solid #000;}
@@ -44,19 +45,19 @@ const smt = nodemail.createTransport(smtpTransport({
   secure: true,
   auth: {
     user: '604389771',
+    // POP3/SMTP服务 授权码
     pass: 'kuvvgyxnrclwbcge'
   }
 }));
 
+// 验证邮件配置
 smt.verify((err, sucess) => {
   if (err) {
     console.log(err)
   } else {
     console.log('OK')
   }
-})
-// tfhbibtpwyqybddc
-// aznqaqunahfvbcjj
+});
 
 const sendMail =  (to, subject, content) => {
   smt.sendMail({

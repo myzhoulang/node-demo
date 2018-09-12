@@ -1,5 +1,6 @@
 const Writable = require('stream').Writable;
 const util = require('util');
+const express = require('express');
 
 function CountStream(matchText, options){
   Writable.call(this, options);
